@@ -20,7 +20,7 @@ const Projects = () => {
     ],
     demoLink: 'https://cashofgrapplers.com',
     githubLink: 'https://github.com/UlisesMZ03',
-    image: '/projects/grapplers.png',
+    image: '/images/cashofgrapplers.png',
   };
 
   const mainProjects = [
@@ -43,6 +43,7 @@ const Projects = () => {
       ],
       demoLink: 'https://laserzonearena.com',
       githubLink: 'https://github.com/UlisesMZ03',
+      image: '/images/laserzonearena.png',
     },
     {
       title: 'Simacr PWA',
@@ -63,6 +64,7 @@ const Projects = () => {
       ],
       demoLink: 'https://simacr.com',
       githubLink: '#',
+      image: '/images/sima.png',
     },
     {
       title: 'CodeINVEST Website',
@@ -83,6 +85,28 @@ const Projects = () => {
       ],
       demoLink: 'https://codeinvest.cr',
       githubLink: 'https://github.com/UlisesMZ03',
+      image: '/images/codeinvest.png',
+    },
+    {
+      title: 'Sirius Dev Website',
+      description:
+        'Sitio web profesional para Sirius Dev, empresa de desarrollo de software. Diseño moderno con portfolio de proyectos, servicios y sistema de contacto integrado.',
+      tech: ['React', 'Tailwind CSS', 'Vite', 'JavaScript', 'REST API'],
+      features: [
+        'Diseño moderno y profesional',
+        'Portfolio de proyectos interactivo',
+        'Sección de servicios detallada',
+        'Formulario de contacto funcional',
+        'Animaciones suaves y transiciones',
+        'Totalmente responsivo',
+      ],
+      metrics: [
+        { label: 'Páginas', value: '8+' },
+        { label: 'Performance', value: '90+' },
+      ],
+      demoLink: '#',
+      githubLink: 'https://github.com/UlisesMZ03',
+      image: '/images/sirius.png',
     },
   ];
 
@@ -199,14 +223,26 @@ const Projects = () => {
               {/* Right - Mockup */}
               <div className="relative">
                 <div className="aspect-video rounded-xl glass-light border border-neon-violet overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                  {/* Mockup placeholder with gradient */}
-                  <div className="w-full h-full bg-gradient-to-br from-neon-violet via-neon-cyan to-neon-magenta opacity-20 flex items-center justify-center">
-                    <div className="text-6xl font-grotesk font-bold gradient-text">QR</div>
+                  {/* Project Image */}
+                  <img
+                    src={featuredProject.image}
+                    alt={featuredProject.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to gradient if image fails to load
+                      e.target.style.display = 'none';
+                      e.target.nextElementSibling.style.display = 'flex';
+                    }}
+                  />
+
+                  {/* Fallback gradient (hidden by default) */}
+                  <div className="w-full h-full bg-gradient-to-br from-neon-violet via-neon-cyan to-neon-magenta opacity-20 items-center justify-center hidden">
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-grotesk font-bold gradient-text">QR</div>
                   </div>
 
-                  {/* Scanning effect */}
+                  {/* Scanning effect overlay */}
                   <div
-                    className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan to-transparent opacity-30 h-1/3"
+                    className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan to-transparent opacity-30 h-1/3 pointer-events-none"
                     style={{ animation: 'scan 3s linear infinite' }}
                   ></div>
                 </div>
@@ -245,8 +281,20 @@ const Projects = () => {
               style={{ animationDelay: `${idx * 0.2}s` }}
             >
               {/* Mockup */}
-              <div className="aspect-video rounded-md sm:rounded-lg glass-light border border-neon-cyan mb-4 sm:mb-6 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-neon-cyan via-neon-violet to-neon-purple opacity-15 flex items-center justify-center">
+              <div className="aspect-video rounded-md sm:rounded-lg glass-light border border-neon-cyan mb-4 sm:mb-6 overflow-hidden relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  onError={(e) => {
+                    // Fallback to gradient if image fails to load
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'flex';
+                  }}
+                />
+
+                {/* Fallback gradient (hidden by default) */}
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-neon-cyan via-neon-violet to-neon-purple opacity-15 items-center justify-center hidden">
                   <div className="text-2xl sm:text-3xl md:text-4xl font-mono font-bold gradient-text">
                     {project.title.split(' ')[0]}
                   </div>
