@@ -100,56 +100,56 @@ const Contact = () => {
   return (
     <section
       id="contacto"
-      className="relative py-24 md:py-32 px-6 md:px-12"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-12"
       style={{
         backgroundImage: `radial-gradient(circle at 50% 50%, rgba(108,99,255,0.05) 0%, transparent 50%), url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300F0FF' fill-opacity='0.02'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
       }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center space-y-4 mb-16">
-          <p className="text-sm font-inter font-medium tracking-widest text-neon-violet uppercase opacity-80">
+        <div className="text-center space-y-3 sm:space-y-4 mb-10 sm:mb-12 md:mb-16">
+          <p className="text-xs sm:text-sm font-inter font-medium tracking-widest text-neon-violet uppercase opacity-80">
             Contacto
           </p>
-          <h2 className="text-4xl md:text-5xl font-grotesk font-bold gradient-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold gradient-text px-4">
             Hablemos de tu proyecto
           </h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-2xl mx-auto px-4">
             Estoy disponible para nuevas oportunidades y colaboraciones emocionantes
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-12">
+        <div className="grid md:grid-cols-5 gap-6 sm:gap-8 md:gap-12">
           {/* Left side - Contact Info */}
-          <div className="md:col-span-2 space-y-8">
+          <div className="md:col-span-2 space-y-4 sm:space-y-6 md:space-y-8 order-2 md:order-1">
             {/* Contact blocks */}
             {contactInfo.map((info, idx) => (
               <div
                 key={info.label}
-                className="group glass-light rounded-xl p-6 border border-text-tertiary hover:border-neon-violet transition-all duration-300 animate-fadeInLeft"
+                className="group glass-light rounded-lg sm:rounded-xl p-4 sm:p-6 border border-text-tertiary hover:border-neon-violet transition-all duration-300 animate-fadeInLeft"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <div className="flex items-start space-x-4">
-                  <div className="text-3xl">{info.icon}</div>
-                  <div className="flex-1">
-                    <p className="text-sm text-text-tertiary font-inter mb-1">{info.label}</p>
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="text-2xl sm:text-3xl">{info.icon}</div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs sm:text-sm text-text-tertiary font-inter mb-1">{info.label}</p>
                     {info.action ? (
                       <a
                         href={info.action}
                         target={info.copyable ? undefined : '_blank'}
                         rel={info.copyable ? undefined : 'noopener noreferrer'}
-                        className="text-text-primary font-inter font-medium hover:text-neon-cyan transition-colors"
+                        className="text-text-primary font-inter font-medium text-sm sm:text-base hover:text-neon-cyan transition-colors break-words"
                       >
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-text-primary font-inter font-medium">{info.value}</p>
+                      <p className="text-text-primary font-inter font-medium text-sm sm:text-base">{info.value}</p>
                     )}
                   </div>
                   {info.copyable && (
                     <button
                       onClick={() => copyToClipboard(info.value)}
-                      className="px-3 py-1 rounded-md text-xs font-inter font-medium glass border border-text-tertiary hover:border-neon-cyan transition-all duration-300 hover:scale-105"
+                      className="px-2 sm:px-3 py-1 rounded-md text-[10px] sm:text-xs font-inter font-medium glass border border-text-tertiary hover:border-neon-cyan transition-all duration-300 hover:scale-105 flex-shrink-0"
                     >
                       Copiar
                     </button>
@@ -188,8 +188,8 @@ const Contact = () => {
           </div>
 
           {/* Right side - Form */}
-          <div className="md:col-span-3">
-            <form onSubmit={handleSubmit} className="glass rounded-xl p-8 border border-text-tertiary space-y-6">
+          <div className="md:col-span-3 order-1 md:order-2">
+            <form onSubmit={handleSubmit} className="glass rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-text-tertiary space-y-4 sm:space-y-6">
               {/* Name */}
               <div className="relative">
                 <label className="block text-sm font-inter font-medium text-text-secondary mb-2">

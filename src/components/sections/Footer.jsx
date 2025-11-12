@@ -32,7 +32,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative pt-20 pb-8 px-6 md:px-12 bg-gradient-to-b from-dark-primary to-black">
+    <footer className="relative pt-12 sm:pt-16 md:pt-20 pb-6 sm:pb-8 px-4 sm:px-6 md:px-12 bg-gradient-to-b from-dark-primary to-black">
       <div
         className="absolute inset-0 opacity-5"
         style={{
@@ -44,7 +44,7 @@ const Footer = () => {
         {/* Top border with glow */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neon-violet to-transparent"></div>
 
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-10 md:mb-12">
           {/* Column 1 - Branding */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">

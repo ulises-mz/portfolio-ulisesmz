@@ -98,53 +98,53 @@ const Projects = () => {
   return (
     <section
       id="proyectos"
-      className="relative py-24 md:py-32 px-6 md:px-12"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-12"
       style={{
         backgroundImage: `linear-gradient(rgba(10, 10, 15, 0.95), rgba(10, 10, 15, 0.95)), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%236C63FF' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E")`,
       }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center space-y-4 mb-16">
-          <p className="text-sm font-inter font-medium tracking-widest text-neon-violet uppercase opacity-80">
+        <div className="text-center space-y-3 sm:space-y-4 mb-10 sm:mb-12 md:mb-16">
+          <p className="text-xs sm:text-sm font-inter font-medium tracking-widest text-neon-violet uppercase opacity-80">
             Proyectos Destacados
           </p>
-          <h2 className="text-4xl md:text-5xl font-grotesk font-bold gradient-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold gradient-text px-4">
             Soluciones digitales que generan impacto
           </h2>
         </div>
 
         {/* Featured Project */}
-        <div className="mb-20">
-          <div className="group relative glass rounded-2xl p-8 md:p-12 border border-text-tertiary hover:border-neon-violet transition-all duration-500 overflow-hidden">
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <div className="group relative glass rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 border border-text-tertiary hover:border-neon-violet transition-all duration-500 overflow-hidden">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gradient-to-r from-neon-violet to-neon-magenta mb-6">
-              <span className="text-lg">🏆</span>
-              <span className="text-sm font-inter font-semibold">Proyecto Destacado</span>
+            <div className="inline-flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-neon-violet to-neon-magenta mb-4 sm:mb-6">
+              <span className="text-base sm:text-lg">🏆</span>
+              <span className="text-xs sm:text-sm font-inter font-semibold">Proyecto Destacado</span>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
               {/* Left - Project Info */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <div>
-                  <h3 className="text-3xl md:text-4xl font-grotesk font-bold text-text-primary mb-2">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-text-primary mb-2">
                     {featuredProject.title}
                   </h3>
-                  <p className="text-lg text-neon-cyan font-inter font-medium">
+                  <p className="text-base sm:text-lg text-neon-cyan font-inter font-medium">
                     {featuredProject.subtitle}
                   </p>
                 </div>
 
-                <p className="text-lg text-text-secondary leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
                   {featuredProject.description}
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   {featuredProject.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-4 py-2 rounded-lg glass-light border border-text-tertiary text-sm font-inter font-medium text-text-primary hover:border-neon-violet hover:scale-105 transition-all duration-300"
+                      className="px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-lg glass-light border border-text-tertiary text-xs sm:text-sm font-inter font-medium text-text-primary hover:border-neon-violet hover:scale-105 transition-all duration-300"
                     >
                       {tech}
                     </span>
@@ -152,23 +152,23 @@ const Projects = () => {
                 </div>
 
                 {/* Features */}
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                   {featuredProject.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start space-x-3">
-                      <span className="text-neon-green text-xl">✓</span>
-                      <span className="text-text-secondary font-inter">{feature}</span>
+                    <li key={idx} className="flex items-start space-x-2 sm:space-x-3">
+                      <span className="text-neon-green text-lg sm:text-xl flex-shrink-0">✓</span>
+                      <span className="text-text-secondary font-inter text-sm sm:text-base">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 {/* Metrics */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6">
                   {featuredProject.metrics.map((metric, idx) => (
-                    <div key={idx} className="glass-light rounded-lg p-4 border border-neon-violet border-opacity-30">
-                      <p className="text-2xl font-grotesk font-bold gradient-text mb-1">
+                    <div key={idx} className="glass-light rounded-lg p-2 sm:p-3 md:p-4 border border-neon-violet border-opacity-30">
+                      <p className="text-lg sm:text-xl md:text-2xl font-grotesk font-bold gradient-text mb-0.5 sm:mb-1">
                         {metric.value}
                       </p>
-                      <p className="text-xs text-text-tertiary font-inter">
+                      <p className="text-[10px] sm:text-xs text-text-tertiary font-inter">
                         {metric.label}
                       </p>
                     </div>
@@ -176,12 +176,12 @@ const Projects = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <a
                     href={featuredProject.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3 rounded-lg gradient-bg font-inter font-medium hover:scale-105 transition-transform duration-300 glow-violet"
+                    className="px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded-lg gradient-bg font-inter font-medium text-sm sm:text-base hover:scale-105 transition-transform duration-300 glow-violet text-center"
                   >
                     Ver Demo
                   </a>
@@ -189,7 +189,7 @@ const Projects = () => {
                     href={featuredProject.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3 rounded-lg glass border border-neon-violet font-inter font-medium hover:scale-105 transition-all duration-300"
+                    className="px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded-lg glass border border-neon-violet font-inter font-medium text-sm sm:text-base hover:scale-105 transition-all duration-300 text-center"
                   >
                     GitHub →
                   </a>
@@ -237,34 +237,34 @@ const Projects = () => {
         </div>
 
         {/* Main Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16">
           {mainProjects.map((project, idx) => (
             <div
               key={project.title}
-              className="group relative glass rounded-xl p-8 border border-text-tertiary hover:border-neon-cyan transition-all duration-500 hover:-translate-y-2 animate-fadeInUp"
+              className="group relative glass rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-text-tertiary hover:border-neon-cyan transition-all duration-500 hover:-translate-y-2 animate-fadeInUp"
               style={{ animationDelay: `${idx * 0.2}s` }}
             >
               {/* Mockup */}
-              <div className="aspect-video rounded-lg glass-light border border-neon-cyan mb-6 overflow-hidden">
+              <div className="aspect-video rounded-md sm:rounded-lg glass-light border border-neon-cyan mb-4 sm:mb-6 overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-neon-cyan via-neon-violet to-neon-purple opacity-15 flex items-center justify-center">
-                  <div className="text-4xl font-mono font-bold gradient-text">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-mono font-bold gradient-text">
                     {project.title.split(' ')[0]}
                   </div>
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-grotesk font-bold text-text-primary mb-3">
+              <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-text-primary mb-2 sm:mb-3">
                 {project.title}
               </h3>
-              <p className="text-text-secondary mb-4">{project.description}</p>
+              <p className="text-text-secondary text-sm sm:text-base mb-3 sm:mb-4">{project.description}</p>
 
               {/* Tech */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 rounded-md text-xs font-inter font-medium glass-light border border-text-tertiary"
+                    className="px-2 sm:px-3 py-1 rounded-md text-[10px] sm:text-xs font-inter font-medium glass-light border border-text-tertiary"
                   >
                     {tech}
                   </span>
@@ -272,10 +272,10 @@ const Projects = () => {
               </div>
 
               {/* Features */}
-              <ul className="space-y-2 mb-4">
+              <ul className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
                 {project.features.map((feature, i) => (
-                  <li key={i} className="flex items-start space-x-2 text-sm text-text-secondary">
-                    <span className="text-neon-cyan">→</span>
+                  <li key={i} className="flex items-start space-x-1.5 sm:space-x-2 text-xs sm:text-sm text-text-secondary">
+                    <span className="text-neon-cyan flex-shrink-0">→</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -283,13 +283,13 @@ const Projects = () => {
 
               {/* Metrics */}
               {project.metrics && (
-                <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
                   {project.metrics.map((metric, idx) => (
-                    <div key={idx} className="glass-light rounded-lg p-3 border border-neon-cyan border-opacity-20">
-                      <p className="text-xl font-grotesk font-bold gradient-text mb-1">
+                    <div key={idx} className="glass-light rounded-md sm:rounded-lg p-2 sm:p-3 border border-neon-cyan border-opacity-20">
+                      <p className="text-base sm:text-lg md:text-xl font-grotesk font-bold gradient-text mb-0.5 sm:mb-1">
                         {metric.value}
                       </p>
-                      <p className="text-xs text-text-tertiary font-inter">
+                      <p className="text-[10px] sm:text-xs text-text-tertiary font-inter">
                         {metric.label}
                       </p>
                     </div>
@@ -298,12 +298,12 @@ const Projects = () => {
               )}
 
               {/* Buttons */}
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                 <a
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2 rounded-lg glass border border-neon-cyan hover:bg-neon-cyan hover:bg-opacity-10 font-inter text-sm font-medium transition-all duration-300 text-center"
+                  className="flex-1 py-2 rounded-lg glass border border-neon-cyan hover:bg-neon-cyan hover:bg-opacity-10 font-inter text-xs sm:text-sm font-medium transition-all duration-300 text-center"
                 >
                   Ver Demo
                 </a>
@@ -311,7 +311,7 @@ const Projects = () => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2 rounded-lg glass border border-text-tertiary hover:border-neon-violet font-inter text-sm font-medium transition-all duration-300 text-center"
+                  className="flex-1 py-2 rounded-lg glass border border-text-tertiary hover:border-neon-violet font-inter text-xs sm:text-sm font-medium transition-all duration-300 text-center"
                 >
                   GitHub
                 </a>
@@ -325,34 +325,34 @@ const Projects = () => {
 
         {/* Other Projects */}
         <div>
-          <h3 className="text-2xl font-grotesk font-bold text-center mb-8 gradient-text">
+          <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-center mb-6 sm:mb-8 gradient-text">
             Otros Proyectos
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             {otherProjects.map((project, idx) => (
               <div
                 key={project.title}
-                className="group relative glass-light rounded-xl p-6 border border-text-tertiary hover:border-neon-magenta transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-scaleIn"
+                className="group relative glass-light rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-text-tertiary hover:border-neon-magenta transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-scaleIn"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <div className="flex flex-col items-center space-y-4">
-                  <div className="text-5xl group-hover:scale-110 transition-transform duration-300">
+                <div className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4">
+                  <div className="text-3xl sm:text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-300">
                     {project.icon}
                   </div>
-                  <div className="text-center space-y-2">
-                    <p className="text-base font-inter font-semibold text-text-primary">
+                  <div className="text-center space-y-1 sm:space-y-2">
+                    <p className="text-sm sm:text-base font-inter font-semibold text-text-primary">
                       {project.title}
                     </p>
-                    <p className="text-xs text-text-secondary font-inter">
+                    <p className="text-[10px] sm:text-xs text-text-secondary font-inter">
                       {project.description}
                     </p>
                   </div>
-                  <div className="flex flex-wrap gap-2 justify-center">
+                  <div className="flex flex-wrap gap-1 sm:gap-1.5 md:gap-2 justify-center">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 text-xs text-text-tertiary font-mono glass rounded"
+                        className="px-1.5 sm:px-2 py-0.5 sm:py-1 text-[9px] sm:text-[10px] md:text-xs text-text-tertiary font-mono glass rounded"
                       >
                         {tech}
                       </span>
@@ -361,7 +361,7 @@ const Projects = () => {
                 </div>
 
                 {/* Hover overlay */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-neon-violet to-neon-magenta opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 rounded-lg sm:rounded-xl bg-gradient-to-br from-neon-violet to-neon-magenta opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               </div>
             ))}
           </div>

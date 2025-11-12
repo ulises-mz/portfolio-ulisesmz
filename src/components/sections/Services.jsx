@@ -53,7 +53,7 @@ const Services = () => {
   return (
     <section
       id="servicios"
-      className="relative py-24 md:py-32 px-6 md:px-12"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-12"
       style={{
         background: 'linear-gradient(135deg, rgba(10,10,15,1) 0%, rgba(19,19,26,1) 50%, rgba(10,10,15,1) 100%)',
         backgroundImage: `linear-gradient(135deg, rgba(10,10,15,0.95) 0%, rgba(19,19,26,0.95) 50%, rgba(10,10,15,0.95) 100%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236C63FF' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -61,42 +61,42 @@ const Services = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Header with CodeINVEST logo */}
-        <div className="text-center space-y-6 mb-16">
+        <div className="text-center space-y-4 sm:space-y-6 mb-10 sm:mb-12 md:mb-16">
           {/* Logo animation */}
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <div className="flex items-center space-x-1">
+          <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+            <div className="flex items-center space-x-0.5 sm:space-x-1">
               {['C', 'O', 'D', 'E'].map((letter, i) => (
                 <span
                   key={i}
-                  className="text-3xl font-grotesk font-bold gradient-text animate-fadeInUp inline-block"
+                  className="text-2xl sm:text-3xl font-grotesk font-bold gradient-text animate-fadeInUp inline-block"
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
                   {letter}
                 </span>
               ))}
             </div>
-            <span className="text-3xl font-grotesk font-bold text-neon-cyan">INVEST</span>
+            <span className="text-2xl sm:text-3xl font-grotesk font-bold text-neon-cyan">INVEST</span>
           </div>
 
-          <p className="text-sm font-inter font-medium tracking-widest text-neon-violet uppercase opacity-80">
+          <p className="text-xs sm:text-sm font-inter font-medium tracking-widest text-neon-violet uppercase opacity-80">
             Nuestros Servicios
           </p>
-          <h2 className="text-4xl md:text-5xl font-grotesk font-bold gradient-text max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-grotesk font-bold gradient-text max-w-3xl mx-auto px-4">
             Transformamos ideas en soluciones digitales inteligentes
           </h2>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16">
           {services.map((service, idx) => (
             <div
               key={service.title}
-              className="group relative glass-light rounded-xl p-8 border border-text-tertiary hover:border-neon-violet transition-all duration-500 hover:-translate-y-2 animate-fadeInUp overflow-hidden"
+              className="group relative glass-light rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-text-tertiary hover:border-neon-violet transition-all duration-500 hover:-translate-y-2 animate-fadeInUp overflow-hidden"
               style={{ animationDelay: `${service.delay}s` }}
             >
               {/* Icon */}
               <div
-                className="w-16 h-16 rounded-lg flex items-center justify-center text-3xl mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12"
                 style={{
                   background: `linear-gradient(135deg, ${service.color}33, ${service.color}11)`,
                   boxShadow: `0 0 20px ${service.color}22`,
@@ -106,18 +106,18 @@ const Services = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-grotesk font-bold text-text-primary mb-3 group-hover:gradient-text transition-all duration-300">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-grotesk font-bold text-text-primary mb-2 sm:mb-3 group-hover:gradient-text transition-all duration-300">
                 {service.title}
               </h3>
-              <p className="text-text-secondary mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-6 leading-relaxed">
                 {service.description}
               </p>
 
               {/* Features */}
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 {service.features.map((feature, i) => (
-                  <li key={i} className="flex items-center space-x-2 text-sm text-text-secondary">
-                    <span className="text-neon-cyan">→</span>
+                  <li key={i} className="flex items-center space-x-1.5 sm:space-x-2 text-xs sm:text-sm text-text-secondary">
+                    <span className="text-neon-cyan flex-shrink-0">→</span>
                     <span>{feature}</span>
                   </li>
                 ))}
