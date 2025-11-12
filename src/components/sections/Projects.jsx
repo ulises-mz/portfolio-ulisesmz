@@ -1,27 +1,52 @@
 const Projects = () => {
-  const featuredProject = {
-    title: 'Cash of Grapplers',
-    subtitle: 'Sistema de ticketera digital con QR',
-    description:
-      'Plataforma completa de gestión de eventos con generación de códigos QR únicos, app móvil de validación en tiempo real y dashboard administrativo con métricas detalladas para optimizar la experiencia del usuario.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'QR Code'],
-    features: [
-      'Generación automática de tickets con códigos QR únicos',
-      'App móvil de escaneo y validación en tiempo real',
-      'Dashboard con estadísticas y métricas de eventos',
-      'Sistema de autenticación seguro con JWT',
-      'Reducción del 50% en tiempo de check-in',
-      '2K+ entradas procesadas exitosamente',
-    ],
-    metrics: [
-      { label: 'Entradas procesadas', value: '2K+' },
-      { label: 'Reducción tiempo check-in', value: '50%' },
-      { label: 'Usuarios activos', value: '500+' },
-    ],
-    demoLink: 'https://cashofgrapplers.com',
-    githubLink: 'https://github.com/UlisesMZ03',
-    image: '/images/cashofgrapplers.png',
-  };
+  const featuredProjects = [
+    {
+      title: 'Cash of Grapplers',
+      subtitle: 'Sistema de ticketera digital con QR',
+      description:
+        'Plataforma completa de gestión de eventos con generación de códigos QR únicos, app móvil de validación en tiempo real y dashboard administrativo con métricas detalladas para optimizar la experiencia del usuario.',
+      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'QR Code'],
+      features: [
+        'Generación automática de tickets con códigos QR únicos',
+        'App móvil de escaneo y validación en tiempo real',
+        'Dashboard con estadísticas y métricas de eventos',
+        'Sistema de autenticación seguro con JWT',
+        'Reducción del 50% en tiempo de check-in',
+        '2K+ entradas procesadas exitosamente',
+      ],
+      metrics: [
+        { label: 'Entradas procesadas', value: '2K+' },
+        { label: 'Reducción tiempo check-in', value: '50%' },
+        { label: 'Usuarios activos', value: '500+' },
+      ],
+      demoLink: 'https://cashofgrapplers.com',
+      githubLink: 'https://github.com/UlisesMZ03',
+      image: '/images/cashofgrapplers.png',
+    },
+    {
+      title: 'Eagle Defender',
+      subtitle: 'Videojuego de estrategia y defensa',
+      description:
+        'Juego de estrategia y defensa desarrollado en Python con pygame. Incluye sistema de usuarios completo, múltiples pantallas interactivas, efectos visuales y sonoros personalizados, y persistencia de datos con SQLite.',
+      tech: ['Python 3', 'pygame', 'SQLite', 'OOP', 'Arquitectura Modular'],
+      features: [
+        'Sistema de login y registro de usuarios',
+        'Pantallas interactivas: menú, instrucciones, Hall of Fame',
+        'Efectos visuales y sonoros personalizados',
+        'Base de datos SQLite para guardar progreso',
+        'Componentes reutilizables (botones, inputs, perfiles)',
+        'Sistema de música y efectos con selección personalizada',
+      ],
+      metrics: [
+        { label: 'Pantallas', value: '6+' },
+        { label: 'Componentes', value: '10+' },
+        { label: 'Módulos', value: '15+' },
+      ],
+      demoLink: 'https://github.com/UlisesMZ03/EagleDefender',
+      githubLink: 'https://github.com/UlisesMZ03/EagleDefender',
+      image: '/images/eagledefender.png',
+    },
+  ];
 
   const mainProjects = [
     {
@@ -108,27 +133,6 @@ const Projects = () => {
       githubLink: 'https://github.com/UlisesMZ03',
       image: '/images/sirius.png',
     },
-    {
-      title: 'Eagle Defender',
-      description:
-        'Juego de estrategia y defensa desarrollado en Python con pygame. Incluye sistema de usuarios completo, múltiples pantallas interactivas, efectos visuales y sonoros personalizados, y persistencia de datos con SQLite.',
-      tech: ['Python 3', 'pygame', 'SQLite', 'OOP', 'Arquitectura Modular'],
-      features: [
-        'Sistema de login y registro de usuarios',
-        'Pantallas interactivas: menú, instrucciones, Hall of Fame',
-        'Efectos visuales y sonoros personalizados',
-        'Base de datos SQLite para guardar progreso',
-        'Componentes reutilizables (botones, inputs, perfiles)',
-        'Sistema de música y efectos con selección personalizada',
-      ],
-      metrics: [
-        { label: 'Pantallas', value: '6+' },
-        { label: 'Componentes', value: '10+' },
-      ],
-      demoLink: 'https://github.com/UlisesMZ03/EagleDefender',
-      githubLink: 'https://github.com/UlisesMZ03/EagleDefender',
-      image: '/images/eagledefender.png',
-    },
   ];
 
   const otherProjects = [
@@ -159,138 +163,146 @@ const Projects = () => {
           </h2>
         </div>
 
-        {/* Featured Project */}
-        <div className="mb-12 sm:mb-16 md:mb-20">
-          <div className="group relative glass rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 border border-text-tertiary hover:border-neon-violet transition-all duration-500 overflow-hidden">
-            {/* Badge */}
-            <div className="inline-flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-neon-violet to-neon-magenta mb-4 sm:mb-6">
-              <span className="text-base sm:text-lg">🏆</span>
-              <span className="text-xs sm:text-sm font-inter font-semibold">Proyecto Destacado</span>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-              {/* Left - Project Info */}
-              <div className="space-y-4 sm:space-y-6">
-                <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-text-primary mb-2">
-                    {featuredProject.title}
-                  </h3>
-                  <p className="text-base sm:text-lg text-neon-cyan font-inter font-medium">
-                    {featuredProject.subtitle}
-                  </p>
-                </div>
-
-                <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
-                  {featuredProject.description}
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 sm:gap-3">
-                  {featuredProject.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-lg glass-light border border-text-tertiary text-xs sm:text-sm font-inter font-medium text-text-primary hover:border-neon-violet hover:scale-105 transition-all duration-300"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Features */}
-                <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-                  {featuredProject.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start space-x-2 sm:space-x-3">
-                      <span className="text-neon-green text-lg sm:text-xl flex-shrink-0">✓</span>
-                      <span className="text-text-secondary font-inter text-sm sm:text-base">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6">
-                  {featuredProject.metrics.map((metric, idx) => (
-                    <div key={idx} className="glass-light rounded-lg p-2 sm:p-3 md:p-4 border border-neon-violet border-opacity-30">
-                      <p className="text-lg sm:text-xl md:text-2xl font-grotesk font-bold gradient-text mb-0.5 sm:mb-1">
-                        {metric.value}
-                      </p>
-                      <p className="text-[10px] sm:text-xs text-text-tertiary font-inter">
-                        {metric.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  <a
-                    href={featuredProject.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded-lg gradient-bg font-inter font-medium text-sm sm:text-base hover:scale-105 transition-transform duration-300 glow-violet text-center"
-                  >
-                    Ver Demo
-                  </a>
-                  <a
-                    href={featuredProject.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded-lg glass border border-neon-violet font-inter font-medium text-sm sm:text-base hover:scale-105 transition-all duration-300 text-center"
-                  >
-                    GitHub →
-                  </a>
-                </div>
+        {/* Featured Projects */}
+        <div className="mb-12 sm:mb-16 md:mb-20 space-y-8 sm:space-y-12 md:space-y-16">
+          {featuredProjects.map((featuredProject, projIdx) => (
+            <div
+              key={featuredProject.title}
+              className="group relative glass rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 border border-text-tertiary hover:border-neon-violet transition-all duration-500 overflow-hidden animate-fadeInUp"
+              style={{ animationDelay: `${projIdx * 0.3}s` }}
+            >
+              {/* Badge */}
+              <div className="inline-flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-neon-violet to-neon-magenta mb-4 sm:mb-6">
+                <span className="text-base sm:text-lg">🏆</span>
+                <span className="text-xs sm:text-sm font-inter font-semibold">Proyecto Destacado</span>
               </div>
 
-              {/* Right - Mockup */}
-              <div className="relative">
-                <div className="aspect-video rounded-xl glass-light border border-neon-violet overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                  {/* Project Image */}
-                  <img
-                    src={featuredProject.image}
-                    alt={featuredProject.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      // Fallback to gradient if image fails to load
-                      e.target.style.display = 'none';
-                      e.target.nextElementSibling.style.display = 'flex';
-                    }}
-                  />
-
-                  {/* Fallback gradient (hidden by default) */}
-                  <div className="w-full h-full bg-gradient-to-br from-neon-violet via-neon-cyan to-neon-magenta opacity-20 items-center justify-center hidden">
-                    <div className="text-4xl sm:text-5xl md:text-6xl font-grotesk font-bold gradient-text">QR</div>
+              <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+                {/* Left - Project Info */}
+                <div className="space-y-4 sm:space-y-6">
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-text-primary mb-2">
+                      {featuredProject.title}
+                    </h3>
+                    <p className="text-base sm:text-lg text-neon-cyan font-inter font-medium">
+                      {featuredProject.subtitle}
+                    </p>
                   </div>
 
-                  {/* Scanning effect overlay */}
-                  <div
-                    className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan to-transparent opacity-30 h-1/3 pointer-events-none"
-                    style={{ animation: 'scan 3s linear infinite' }}
-                  ></div>
+                  <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
+                    {featuredProject.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
+                    {featuredProject.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-lg glass-light border border-text-tertiary text-xs sm:text-sm font-inter font-medium text-text-primary hover:border-neon-violet hover:scale-105 transition-all duration-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Features */}
+                  <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                    {featuredProject.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start space-x-2 sm:space-x-3">
+                        <span className="text-neon-green text-lg sm:text-xl flex-shrink-0">✓</span>
+                        <span className="text-text-secondary font-inter text-sm sm:text-base">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Metrics */}
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6">
+                    {featuredProject.metrics.map((metric, idx) => (
+                      <div key={idx} className="glass-light rounded-lg p-2 sm:p-3 md:p-4 border border-neon-violet border-opacity-30">
+                        <p className="text-lg sm:text-xl md:text-2xl font-grotesk font-bold gradient-text mb-0.5 sm:mb-1">
+                          {metric.value}
+                        </p>
+                        <p className="text-[10px] sm:text-xs text-text-tertiary font-inter">
+                          {metric.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <a
+                      href={featuredProject.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded-lg gradient-bg font-inter font-medium text-sm sm:text-base hover:scale-105 transition-transform duration-300 glow-violet text-center"
+                    >
+                      Ver Demo
+                    </a>
+                    <a
+                      href={featuredProject.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded-lg glass border border-neon-violet font-inter font-medium text-sm sm:text-base hover:scale-105 transition-all duration-300 text-center"
+                    >
+                      GitHub →
+                    </a>
+                  </div>
                 </div>
 
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-neon-violet to-neon-cyan opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500 -z-10"></div>
+                {/* Right - Mockup */}
+                <div className="relative">
+                  <div className="aspect-video rounded-xl glass-light border border-neon-violet overflow-hidden group-hover:scale-105 transition-transform duration-500 bg-gray-900 flex items-center justify-center">
+                    {/* Project Image */}
+                    <img
+                      src={featuredProject.image}
+                      alt={featuredProject.title}
+                      className="w-full h-full object-contain p-4"
+                      onError={(e) => {
+                        // Fallback to gradient if image fails to load
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'flex';
+                      }}
+                    />
+
+                    {/* Fallback gradient (hidden by default) */}
+                    <div className="w-full h-full bg-gradient-to-br from-neon-violet via-neon-cyan to-neon-magenta opacity-20 items-center justify-center hidden">
+                      <div className="text-4xl sm:text-5xl md:text-6xl font-grotesk font-bold gradient-text">
+                        {featuredProject.title.split(' ')[0].substring(0, 2).toUpperCase()}
+                      </div>
+                    </div>
+
+                    {/* Scanning effect overlay */}
+                    <div
+                      className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan to-transparent opacity-30 h-1/3 pointer-events-none"
+                      style={{ animation: 'scan 3s linear infinite' }}
+                    ></div>
+                  </div>
+
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-neon-violet to-neon-cyan opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500 -z-10"></div>
+                </div>
+              </div>
+
+              {/* Animated border */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div
+                  className="absolute inset-0 rounded-2xl"
+                  style={{
+                    background:
+                      'linear-gradient(90deg, #6C63FF, #00F0FF, #FF00AA, #6C63FF)',
+                    backgroundSize: '300% 100%',
+                    animation: 'gradient-border 3s linear infinite',
+                    WebkitMask:
+                      'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                    WebkitMaskComposite: 'xor',
+                    maskComposite: 'exclude',
+                    padding: '2px',
+                  }}
+                ></div>
               </div>
             </div>
-
-            {/* Animated border */}
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-              <div
-                className="absolute inset-0 rounded-2xl"
-                style={{
-                  background:
-                    'linear-gradient(90deg, #6C63FF, #00F0FF, #FF00AA, #6C63FF)',
-                  backgroundSize: '300% 100%',
-                  animation: 'gradient-border 3s linear infinite',
-                  WebkitMask:
-                    'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                  WebkitMaskComposite: 'xor',
-                  maskComposite: 'exclude',
-                  padding: '2px',
-                }}
-              ></div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Main Projects Grid */}
@@ -302,11 +314,11 @@ const Projects = () => {
               style={{ animationDelay: `${idx * 0.2}s` }}
             >
               {/* Mockup */}
-              <div className="aspect-video rounded-md sm:rounded-lg glass-light border border-neon-cyan mb-4 sm:mb-6 overflow-hidden relative">
+              <div className="aspect-video rounded-md sm:rounded-lg glass-light border border-neon-cyan mb-4 sm:mb-6 overflow-hidden relative bg-gray-900 flex items-center justify-center">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                   onError={(e) => {
                     // Fallback to gradient if image fails to load
                     e.target.style.display = 'none';
