@@ -118,59 +118,240 @@ const Hero = () => {
         {/* Right side - 3D Illustration / SVG Animation */}
         <div className="relative hidden md:flex items-center justify-center">
           <div className="relative w-full h-96 flex items-center justify-center">
-            {/* Animated circuit/tech illustration */}
+            {/* Animated atomic/tech illustration */}
             <div className="absolute inset-0 flex items-center justify-center">
-              {/* Outer ring */}
-              <div className="absolute w-80 h-80 rounded-full border border-neon-violet opacity-20 animate-spin-slow"></div>
-              <div
-                className="absolute w-64 h-64 rounded-full border border-neon-cyan opacity-30"
-                style={{ animation: 'spin 20s linear infinite reverse' }}
-              ></div>
 
-              {/* Center hexagon */}
-              <div className="relative w-48 h-48 flex items-center justify-center">
+              {/* Orbital rings - múltiples anillos en diferentes ángulos */}
+              {/* Ring 1 - Horizontal */}
+              <div
+                className="absolute w-80 h-80 rounded-full border-2 border-neon-violet opacity-30"
+                style={{
+                  animation: 'spin 20s linear infinite',
+                  transformStyle: 'preserve-3d'
+                }}
+              >
+                {/* Particles on ring 1 */}
+                {[...Array(3)].map((_, i) => (
+                  <div
+                    key={`ring1-${i}`}
+                    className="absolute w-3 h-3 rounded-full bg-neon-violet shadow-lg"
+                    style={{
+                      top: '50%',
+                      left: '50%',
+                      boxShadow: '0 0 15px rgba(108, 99, 255, 0.8)',
+                      animation: `orbit-ring1 ${8 + i * 2}s linear infinite`,
+                      animationDelay: `${i * 2.5}s`,
+                    }}
+                  ></div>
+                ))}
+              </div>
+
+              {/* Ring 2 - Inclinado 60° */}
+              <div
+                className="absolute w-72 h-72 rounded-full border-2 border-neon-cyan opacity-30"
+                style={{
+                  animation: 'spin 15s linear infinite reverse',
+                  transform: 'rotateX(60deg)',
+                  transformStyle: 'preserve-3d'
+                }}
+              >
+                {/* Particles on ring 2 */}
+                {[...Array(4)].map((_, i) => (
+                  <div
+                    key={`ring2-${i}`}
+                    className="absolute w-2.5 h-2.5 rounded-full bg-neon-cyan"
+                    style={{
+                      top: '50%',
+                      left: '50%',
+                      boxShadow: '0 0 15px rgba(0, 240, 255, 0.8)',
+                      animation: `orbit-ring2 ${10 + i * 1.5}s linear infinite`,
+                      animationDelay: `${i * 2}s`,
+                    }}
+                  ></div>
+                ))}
+              </div>
+
+              {/* Ring 3 - Vertical */}
+              <div
+                className="absolute w-64 h-64 rounded-full border-2 border-neon-magenta opacity-30"
+                style={{
+                  animation: 'spin 18s linear infinite',
+                  transform: 'rotateY(90deg)',
+                  transformStyle: 'preserve-3d'
+                }}
+              >
+                {/* Particles on ring 3 */}
+                {[...Array(3)].map((_, i) => (
+                  <div
+                    key={`ring3-${i}`}
+                    className="absolute w-2 h-2 rounded-full bg-neon-magenta"
+                    style={{
+                      top: '50%',
+                      left: '50%',
+                      boxShadow: '0 0 15px rgba(255, 0, 170, 0.8)',
+                      animation: `orbit-ring3 ${12 + i * 2}s linear infinite`,
+                      animationDelay: `${i * 3}s`,
+                    }}
+                  ></div>
+                ))}
+              </div>
+
+              {/* Center Core - SVG Tech Symbol */}
+              <div className="relative w-56 h-56 flex items-center justify-center animate-float">
                 <svg
-                  viewBox="0 0 100 100"
-                  className="w-full h-full animate-float"
-                  style={{ filter: 'drop-shadow(0 0 20px rgba(108, 99, 255, 0.5))' }}
+                  viewBox="0 0 200 200"
+                  className="w-full h-full"
+                  style={{
+                    filter: 'drop-shadow(0 0 30px rgba(108, 99, 255, 0.6))',
+                  }}
                 >
-                  <polygon
-                    points="50 1 95 25 95 75 50 99 5 75 5 25"
-                    fill="url(#hexGradient)"
-                    stroke="url(#hexStroke)"
-                    strokeWidth="2"
-                  />
                   <defs>
-                    <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#6C63FF" stopOpacity="0.2" />
-                      <stop offset="50%" stopColor="#00F0FF" stopOpacity="0.2" />
-                      <stop offset="100%" stopColor="#FF00AA" stopOpacity="0.2" />
+                    <linearGradient id="coreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#6C63FF">
+                        <animate attributeName="stop-color" values="#6C63FF; #00F0FF; #FF00AA; #6C63FF" dur="4s" repeatCount="indefinite" />
+                      </stop>
+                      <stop offset="50%" stopColor="#00F0FF">
+                        <animate attributeName="stop-color" values="#00F0FF; #FF00AA; #6C63FF; #00F0FF" dur="4s" repeatCount="indefinite" />
+                      </stop>
+                      <stop offset="100%" stopColor="#FF00AA">
+                        <animate attributeName="stop-color" values="#FF00AA; #6C63FF; #00F0FF; #FF00AA" dur="4s" repeatCount="indefinite" />
+                      </stop>
                     </linearGradient>
-                    <linearGradient id="hexStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#6C63FF" />
-                      <stop offset="50%" stopColor="#00F0FF" />
-                      <stop offset="100%" stopColor="#FF00AA" />
-                    </linearGradient>
+
+                    <filter id="glow">
+                      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                      <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
                   </defs>
+
+                  {/* Outer hexagon */}
+                  <polygon
+                    points="100,20 170,55 170,130 100,165 30,130 30,55"
+                    fill="none"
+                    stroke="url(#coreGradient)"
+                    strokeWidth="3"
+                    opacity="0.6"
+                    filter="url(#glow)"
+                  >
+                    <animateTransform
+                      attributeName="transform"
+                      type="rotate"
+                      from="0 100 100"
+                      to="360 100 100"
+                      dur="30s"
+                      repeatCount="indefinite"
+                    />
+                  </polygon>
+
+                  {/* Inner hexagon */}
+                  <polygon
+                    points="100,40 150,65 150,115 100,140 50,115 50,65"
+                    fill="rgba(108, 99, 255, 0.1)"
+                    stroke="url(#coreGradient)"
+                    strokeWidth="2"
+                    opacity="0.8"
+                    filter="url(#glow)"
+                  >
+                    <animateTransform
+                      attributeName="transform"
+                      type="rotate"
+                      from="360 100 100"
+                      to="0 100 100"
+                      dur="20s"
+                      repeatCount="indefinite"
+                    />
+                  </polygon>
+
+                  {/* Code brackets - animated */}
+                  <g transform="translate(100, 92)" filter="url(#glow)">
+                    {/* Left bracket < */}
+                    <path
+                      d="M -15,-15 L -25,0 L -15,15"
+                      fill="none"
+                      stroke="url(#coreGradient)"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+                    </path>
+
+                    {/* Right bracket > */}
+                    <path
+                      d="M 15,-15 L 25,0 L 15,15"
+                      fill="none"
+                      stroke="url(#coreGradient)"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" begin="0.5s" />
+                    </path>
+
+                    {/* Forward slash / */}
+                    <line
+                      x1="-5"
+                      y1="18"
+                      x2="5"
+                      y2="-18"
+                      stroke="url(#coreGradient)"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                    >
+                      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" begin="1s" />
+                    </line>
+                  </g>
+
+                  {/* Corner accents */}
+                  {[[100,20], [170,55], [170,130], [100,165], [30,130], [30,55]].map(([x, y], i) => (
+                    <circle
+                      key={i}
+                      cx={x}
+                      cy={y}
+                      r="3"
+                      fill="url(#coreGradient)"
+                      opacity="0.8"
+                    >
+                      <animate
+                        attributeName="r"
+                        values="3;5;3"
+                        dur="2s"
+                        repeatCount="indefinite"
+                        begin={`${i * 0.3}s`}
+                      />
+                    </circle>
+                  ))}
+
+                  {/* Circuit lines */}
+                  <line x1="100" y1="20" x2="100" y2="0" stroke="url(#coreGradient)" strokeWidth="2" opacity="0.4" />
+                  <line x1="170" y1="55" x2="190" y2="45" stroke="url(#coreGradient)" strokeWidth="2" opacity="0.4" />
+                  <line x1="170" y1="130" x2="190" y2="140" stroke="url(#coreGradient)" strokeWidth="2" opacity="0.4" />
+                  <line x1="100" y1="165" x2="100" y2="185" stroke="url(#coreGradient)" strokeWidth="2" opacity="0.4" />
+                  <line x1="30" y1="130" x2="10" y2="140" stroke="url(#coreGradient)" strokeWidth="2" opacity="0.4" />
+                  <line x1="30" y1="55" x2="10" y2="45" stroke="url(#coreGradient)" strokeWidth="2" opacity="0.4" />
                 </svg>
 
-                {/* Floating code symbols */}
-                <div className="absolute inset-0 flex items-center justify-center font-mono text-neon-violet text-4xl font-bold">
-                  &lt;/&gt;
+                {/* Pulsing energy core */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-24 h-24 rounded-full bg-gradient-to-r from-neon-violet via-neon-cyan to-neon-magenta opacity-20 blur-xl animate-pulse"></div>
                 </div>
               </div>
 
-              {/* Orbiting particles */}
-              {[...Array(6)].map((_, i) => (
+              {/* Small floating particles around */}
+              {[...Array(8)].map((_, i) => (
                 <div
-                  key={i}
-                  className="absolute w-3 h-3 rounded-full bg-gradient-to-r from-neon-violet to-neon-cyan"
+                  key={`float-${i}`}
+                  className="absolute w-1.5 h-1.5 rounded-full"
                   style={{
-                    top: '50%',
-                    left: '50%',
-                    animation: `orbit ${5 + i}s linear infinite`,
+                    background: ['#6C63FF', '#00F0FF', '#FF00AA', '#00FFA3'][i % 4],
+                    boxShadow: `0 0 10px ${['#6C63FF', '#00F0FF', '#FF00AA', '#00FFA3'][i % 4]}`,
+                    top: `${20 + Math.random() * 60}%`,
+                    left: `${20 + Math.random() * 60}%`,
+                    animation: `float ${4 + i}s ease-in-out infinite`,
                     animationDelay: `${i * 0.5}s`,
-                    transformOrigin: `${100 + i * 20}px`,
                   }}
                 ></div>
               ))}
@@ -217,14 +398,33 @@ const Hero = () => {
       </div>
 
       <style jsx>{`
-        @keyframes orbit {
+        @keyframes orbit-ring1 {
           from {
-            transform: rotate(0deg) translateX(100px) rotate(0deg);
+            transform: rotate(0deg) translateX(160px) rotate(0deg);
           }
           to {
-            transform: rotate(360deg) translateX(100px) rotate(-360deg);
+            transform: rotate(360deg) translateX(160px) rotate(-360deg);
           }
         }
+
+        @keyframes orbit-ring2 {
+          from {
+            transform: rotate(0deg) translateX(144px) rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg) translateX(144px) rotate(-360deg);
+          }
+        }
+
+        @keyframes orbit-ring3 {
+          from {
+            transform: rotate(0deg) translateX(128px) rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg) translateX(128px) rotate(-360deg);
+          }
+        }
+
         @keyframes spin-slow {
           from {
             transform: rotate(0deg);
