@@ -101,7 +101,7 @@ const About = () => {
                   >
                     {/* Profile Image */}
                     <img
-                      src="/images/profile.jpg"
+                      src="/images/profile.png"
                       alt="Ulises Méndez"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       onError={(e) => {
