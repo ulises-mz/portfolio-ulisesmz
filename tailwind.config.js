@@ -4,6 +4,33 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    {
+      pattern: /(bg|text|border)-(dark|neon|text)-(primary|secondary|tertiary|violet|cyan|magenta|purple|green)/,
+    },
+    'glass',
+    'glass-light',
+    'gradient-text',
+    'gradient-text-violet',
+    'gradient-bg',
+    'glow-violet',
+    'glow-cyan',
+    'glow-magenta',
+    'glow-green',
+    'border-gradient',
+    'animate-fadeInUp',
+    'animate-fadeInLeft',
+    'animate-fadeInRight',
+    'animate-scaleIn',
+    'animate-float',
+    'animate-pulse-slow',
+    'stagger-1',
+    'stagger-2',
+    'stagger-3',
+    'stagger-4',
+    'stagger-5',
+    'stagger-6',
+  ],
   theme: {
     extend: {
       colors: {
