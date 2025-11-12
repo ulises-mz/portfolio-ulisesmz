@@ -99,19 +99,30 @@ const About = () => {
                         'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
                     }}
                   >
-                    {/* Placeholder with gradient background */}
-                    <div className="w-full h-full bg-gradient-to-br from-neon-violet via-neon-cyan to-neon-magenta opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                    {/* Profile Image */}
+                    <img
+                      src="/images/profile.jpg"
+                      alt="Ulises Méndez"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        // Fallback si la imagen no se encuentra
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'block';
+                      }}
+                    />
 
-                    {/* Icon overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-8xl font-grotesk font-bold gradient-text group-hover:scale-110 transition-transform duration-500">
-                        UM
+                    {/* Fallback placeholder (hidden por defecto) */}
+                    <div className="w-full h-full bg-gradient-to-br from-neon-violet via-neon-cyan to-neon-magenta opacity-20 group-hover:opacity-30 transition-opacity duration-500 hidden">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-8xl font-grotesk font-bold gradient-text group-hover:scale-110 transition-transform duration-500">
+                          UM
+                        </div>
                       </div>
                     </div>
 
                     {/* Scan line effect */}
                     <div
-                      className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan to-transparent opacity-20"
+                      className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan to-transparent opacity-20 pointer-events-none"
                       style={{
                         animation: 'scan 8s linear infinite',
                         height: '20%',
