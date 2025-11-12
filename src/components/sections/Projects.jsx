@@ -3,16 +3,23 @@ const Projects = () => {
     title: 'Cash of Grapplers',
     subtitle: 'Sistema de ticketera digital con QR',
     description:
-      'Plataforma completa de gestión de eventos con generación de códigos QR únicos, app móvil de validación y dashboard administrativo con métricas en tiempo real.',
-    tech: ['React', 'Node.js', 'MongoDB', 'JWT', 'QR'],
+      'Plataforma completa de gestión de eventos con generación de códigos QR únicos, app móvil de validación en tiempo real y dashboard administrativo con métricas detalladas para optimizar la experiencia del usuario.',
+    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'QR Code'],
     features: [
-      'Generación de códigos QR únicos',
-      'App móvil de validación',
-      'Dashboard administrativo con métricas',
-      'Autenticación segura JWT',
+      'Generación automática de tickets con códigos QR únicos',
+      'App móvil de escaneo y validación en tiempo real',
+      'Dashboard con estadísticas y métricas de eventos',
+      'Sistema de autenticación seguro con JWT',
+      'Reducción del 50% en tiempo de check-in',
+      '2K+ entradas procesadas exitosamente',
     ],
-    demoLink: '#',
-    githubLink: '#',
+    metrics: [
+      { label: 'Entradas procesadas', value: '2K+' },
+      { label: 'Reducción tiempo check-in', value: '50%' },
+      { label: 'Usuarios activos', value: '500+' },
+    ],
+    demoLink: 'https://cashofgrapplers.com',
+    githubLink: 'https://github.com/UlisesMZ03',
     image: '/projects/grapplers.png',
   };
 
@@ -20,40 +27,72 @@ const Projects = () => {
     {
       title: 'Laser Zone Arena',
       description:
-        'Sistema completo de gestión para arena de láser tag con reservaciones en línea, control de equipos y estadísticas de juego.',
-      tech: ['React', 'phpMyAdmin', 'MySQL', 'Tailwind'],
+        'Sistema integral de gestión para arena de láser tag con reservaciones en línea, control de equipos, timer de partidas y estadísticas completas de jugadores en tiempo real.',
+      tech: ['React', 'PHP', 'MySQL', 'phpMyAdmin', 'Tailwind CSS', 'JavaScript'],
       features: [
-        'Sistema de reservas online',
-        'Gestión de equipamiento',
-        'Estadísticas de jugadores',
-        'Panel administrativo',
+        'Sistema de reservas online con calendario interactivo',
+        'Timer digital para control de partidas',
+        'Gestión completa de equipamiento y chalecos',
+        'Estadísticas detalladas de jugadores y equipos',
+        'Panel administrativo con reportes en tiempo real',
+        'Integración con sistema de pagos',
       ],
-      demoLink: '#',
+      metrics: [
+        { label: 'Partidas gestionadas', value: '1.5K+' },
+        { label: 'Uptime', value: '99.5%' },
+      ],
+      demoLink: 'https://laserzonearena.com',
+      githubLink: 'https://github.com/UlisesMZ03',
+    },
+    {
+      title: 'Simacr PWA',
+      description:
+        'Progressive Web App desarrollada para Simacr, conectada a Shopify API para gestión de inventario, pedidos y sincronización en tiempo real con la plataforma de e-commerce.',
+      tech: ['React', 'Shopify API', 'PWA', 'Service Workers', 'Node.js', 'REST API'],
+      features: [
+        'Sincronización en tiempo real con Shopify',
+        'Gestión offline con Service Workers',
+        'Control de inventario y productos',
+        'Sistema de pedidos optimizado',
+        'Notificaciones push para actualizaciones',
+        'Interfaz responsiva y rápida',
+      ],
+      metrics: [
+        { label: 'Productos gestionados', value: '500+' },
+        { label: 'Velocidad de carga', value: '<2s' },
+      ],
+      demoLink: 'https://simacr.com',
       githubLink: '#',
     },
     {
-      title: 'CodeINVEST Platform',
+      title: 'CodeINVEST Website',
       description:
-        'Sitio web corporativo para agencia de desarrollo con portfolio interactivo, blog técnico y sistema de cotizaciones automatizado.',
-      tech: ['React', 'Next.js', 'Tailwind', 'Framer Motion'],
+        'Sitio web corporativo moderno para CodeINVEST, agencia de desarrollo de software. Incluye portfolio interactivo, sistema de contacto y secciones optimizadas para SEO.',
+      tech: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'SEO'],
       features: [
-        'Portfolio interactivo',
-        'Blog con MDX',
-        'Sistema de cotizaciones',
-        'Animaciones avanzadas',
+        'Portfolio interactivo con animaciones avanzadas',
+        'Diseño responsivo y moderno',
+        'Optimización SEO completa',
+        'Sistema de contacto integrado',
+        'Rendimiento optimizado con Next.js',
+        'Animaciones fluidas con Framer Motion',
       ],
-      demoLink: '#',
-      githubLink: '#',
+      metrics: [
+        { label: 'Score Lighthouse', value: '95+' },
+        { label: 'Tiempo de carga', value: '<1.5s' },
+      ],
+      demoLink: 'https://codeinvest.cr',
+      githubLink: 'https://github.com/UlisesMZ03',
     },
   ];
 
   const otherProjects = [
-    { title: 'E-commerce Dashboard', tech: ['React', 'Node', 'MongoDB'], icon: '🛒' },
-    { title: 'Weather App', tech: ['React', 'API', 'CSS'], icon: '🌤️' },
-    { title: 'Task Manager', tech: ['Vue', 'Firebase'], icon: '✅' },
-    { title: 'Portfolio Generator', tech: ['Next.js', 'Tailwind'], icon: '🎨' },
-    { title: 'Chat Application', tech: ['Socket.io', 'React'], icon: '💬' },
-    { title: 'Blog Platform', tech: ['Gatsby', 'GraphQL'], icon: '📝' },
+    { title: 'Expedición CR', tech: ['WordPress', 'PHP', 'MySQL'], icon: '🌴', description: 'Sitio web para agencia de turismo' },
+    { title: 'Compilador MiniC', tech: ['C++', 'Compiladores'], icon: '⚙️', description: 'Compilador académico' },
+    { title: 'Simulador MIPS', tech: ['Assembly', 'C'], icon: '🖥️', description: 'Simulador de arquitectura' },
+    { title: 'Sistema Prolog', tech: ['Prolog', 'Lógica'], icon: '🧠', description: 'Sistema experto' },
+    { title: 'Shell Scripts', tech: ['Bash', 'Linux'], icon: '💻', description: 'Automatización de tareas' },
+    { title: 'Proyecto Racket', tech: ['Racket', 'Funcional'], icon: '🔧', description: 'Programación funcional' },
   ];
 
   return (
@@ -113,7 +152,7 @@ const Projects = () => {
                 </div>
 
                 {/* Features */}
-                <ul className="space-y-3">
+                <ul className="space-y-3 mb-6">
                   {featuredProject.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
                       <span className="text-neon-green text-xl">✓</span>
@@ -122,14 +161,38 @@ const Projects = () => {
                   ))}
                 </ul>
 
+                {/* Metrics */}
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  {featuredProject.metrics.map((metric, idx) => (
+                    <div key={idx} className="glass-light rounded-lg p-4 border border-neon-violet border-opacity-30">
+                      <p className="text-2xl font-grotesk font-bold gradient-text mb-1">
+                        {metric.value}
+                      </p>
+                      <p className="text-xs text-text-tertiary font-inter">
+                        {metric.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
                 {/* Buttons */}
                 <div className="flex flex-wrap gap-4">
-                  <button className="px-6 py-3 rounded-lg gradient-bg font-inter font-medium hover:scale-105 transition-transform duration-300 glow-violet">
+                  <a
+                    href={featuredProject.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 rounded-lg gradient-bg font-inter font-medium hover:scale-105 transition-transform duration-300 glow-violet"
+                  >
                     Ver Demo
-                  </button>
-                  <button className="px-6 py-3 rounded-lg glass border border-neon-violet font-inter font-medium hover:scale-105 transition-all duration-300">
+                  </a>
+                  <a
+                    href={featuredProject.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 rounded-lg glass border border-neon-violet font-inter font-medium hover:scale-105 transition-all duration-300"
+                  >
                     GitHub →
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -209,7 +272,7 @@ const Projects = () => {
               </div>
 
               {/* Features */}
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-4">
                 {project.features.map((feature, i) => (
                   <li key={i} className="flex items-start space-x-2 text-sm text-text-secondary">
                     <span className="text-neon-cyan">→</span>
@@ -218,14 +281,40 @@ const Projects = () => {
                 ))}
               </ul>
 
+              {/* Metrics */}
+              {project.metrics && (
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {project.metrics.map((metric, idx) => (
+                    <div key={idx} className="glass-light rounded-lg p-3 border border-neon-cyan border-opacity-20">
+                      <p className="text-xl font-grotesk font-bold gradient-text mb-1">
+                        {metric.value}
+                      </p>
+                      <p className="text-xs text-text-tertiary font-inter">
+                        {metric.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {/* Buttons */}
               <div className="flex gap-3">
-                <button className="flex-1 py-2 rounded-lg glass border border-neon-cyan hover:bg-neon-cyan hover:bg-opacity-10 font-inter text-sm font-medium transition-all duration-300">
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-2 rounded-lg glass border border-neon-cyan hover:bg-neon-cyan hover:bg-opacity-10 font-inter text-sm font-medium transition-all duration-300 text-center"
+                >
                   Ver Demo
-                </button>
-                <button className="flex-1 py-2 rounded-lg glass border border-text-tertiary hover:border-neon-violet font-inter text-sm font-medium transition-all duration-300">
+                </a>
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-2 rounded-lg glass border border-text-tertiary hover:border-neon-violet font-inter text-sm font-medium transition-all duration-300 text-center"
+                >
                   GitHub
-                </button>
+                </a>
               </div>
 
               {/* Hover glow */}
@@ -240,25 +329,30 @@ const Projects = () => {
             Otros Proyectos
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {otherProjects.map((project, idx) => (
               <div
                 key={project.title}
-                className="group relative aspect-square glass-light rounded-xl p-4 border border-text-tertiary hover:border-neon-magenta transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-scaleIn"
+                className="group relative glass-light rounded-xl p-6 border border-text-tertiary hover:border-neon-magenta transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-scaleIn"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <div className="flex flex-col items-center justify-center h-full space-y-3">
-                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                <div className="flex flex-col items-center space-y-4">
+                  <div className="text-5xl group-hover:scale-110 transition-transform duration-300">
                     {project.icon}
                   </div>
-                  <p className="text-sm font-inter font-semibold text-center text-text-primary">
-                    {project.title}
-                  </p>
-                  <div className="flex flex-wrap gap-1 justify-center">
-                    {project.tech.slice(0, 2).map((tech) => (
+                  <div className="text-center space-y-2">
+                    <p className="text-base font-inter font-semibold text-text-primary">
+                      {project.title}
+                    </p>
+                    <p className="text-xs text-text-secondary font-inter">
+                      {project.description}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs text-text-tertiary font-mono"
+                        className="px-2 py-1 text-xs text-text-tertiary font-mono glass rounded"
                       >
                         {tech}
                       </span>

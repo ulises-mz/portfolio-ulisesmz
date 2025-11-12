@@ -28,7 +28,7 @@ const About = () => {
   const animateCounters = () => {
     const duration = 2000;
     const steps = 60;
-    const targets = { age: 22, tech: 10, projects: 15 };
+    const targets = { age: 22, tech: 30, projects: 20 };
     const increment = {
       age: targets.age / steps,
       tech: targets.tech / steps,
@@ -181,34 +181,66 @@ const About = () => {
                 <span className="text-neon-cyan font-semibold">
                   ingeniero en computadores apasionado
                 </span>{' '}
-                por crear experiencias digitales que impactan. Con 22 años, he dedicado mi carrera
-                a dominar el arte del desarrollo de software y la innovación tecnológica.
+                por crear experiencias digitales que transforman ideas en realidad. Con 22 años, combino
+                juventud innovadora con experiencia técnica sólida en desarrollo full-stack, arquitectura
+                de software y liderazgo de proyectos tecnológicos.
               </p>
 
               <p className="animate-fadeInUp stagger-1">
-                Graduado del{' '}
+                Graduado del prestigioso{' '}
                 <span className="text-neon-violet font-semibold">
-                  Instituto Tecnológico de Costa Rica
+                  Instituto Tecnológico de Costa Rica (TEC)
                 </span>
-                , donde me especialicé en algoritmos, arquitectura de sistemas y desarrollo de
-                software con conocimientos avanzados en IA, bases de datos y desarrollo web/móvil.
+                , una de las mejores instituciones tecnológicas de América Latina. Mi formación abarca desde{' '}
+                <span className="text-text-primary font-medium">
+                  algoritmos avanzados y estructuras de datos
+                </span>
+                {' '}hasta{' '}
+                <span className="text-text-primary font-medium">
+                  inteligencia artificial, bases de datos distribuidas y desarrollo web/móvil moderno
+                </span>
+                . También me especialicé en{' '}
+                <span className="text-neon-green font-semibold">compiladores, lenguajes de programación</span>
+                {' '}y arquitectura de computadores.
               </p>
 
               <p className="animate-fadeInUp stagger-2">
-                Fundador de{' '}
+                Fundador y líder de{' '}
                 <span className="text-neon-magenta font-semibold">CodeINVEST</span>, una agencia
-                dedicada a transformar ideas en soluciones digitales inteligentes. También formé
-                parte de <span className="text-neon-green font-semibold">Sirius Dev</span>, donde
-                desarrollé proyectos innovadores para diversos clientes.
+                boutique dedicada a transformar ideas ambiciosas en soluciones digitales de alto impacto.
+                Previamente, formé parte del equipo de{' '}
+                <span className="text-neon-green font-semibold">Sirius Dev</span>, donde desarrollé
+                sistemas web complejos y PWAs para clientes empresariales. Mi experiencia incluye desde{' '}
+                <span className="text-text-primary font-medium">
+                  e-commerce y sistemas de gestión empresarial
+                </span>
+                {' '}hasta{' '}
+                <span className="text-text-primary font-medium">
+                  aplicaciones de eventos en tiempo real
+                </span>.
               </p>
 
               <p className="animate-fadeInUp stagger-3">
-                Mi filosofía es simple:{' '}
-                <span className="gradient-text font-semibold">
-                  código limpio, diseño impactante y resultados excepcionales
+                Domino más de{' '}
+                <span className="text-neon-cyan font-semibold">30 tecnologías</span> que van desde{' '}
+                <span className="text-text-primary font-medium">
+                  React, Node.js, MongoDB y TypeScript
                 </span>
-                . Cada línea de código que escribo está pensada para crear valor y generar impacto
-                real.
+                {' '}hasta lenguajes de bajo nivel como{' '}
+                <span className="text-text-primary font-medium">C, C++ y Assembly</span>.
+                Soy bilingüe (español/inglés) y destaco por mi{' '}
+                <span className="gradient-text font-semibold">
+                  liderazgo, trabajo en equipo, pensamiento crítico y capacidad de resolver problemas complejos
+                </span>.
+              </p>
+
+              <p className="animate-fadeInUp stagger-4">
+                Mi filosofía:{' '}
+                <span className="gradient-text font-semibold text-xl">
+                  código limpio, diseño que impacta, resultados que superan expectativas
+                </span>
+                . Cada proyecto es una oportunidad para innovar, cada línea de código está pensada
+                para crear valor duradero y generar impacto real en la vida de las personas.
               </p>
             </div>
 

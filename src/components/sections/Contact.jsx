@@ -66,14 +66,14 @@ const Contact = () => {
     {
       icon: '📧',
       label: 'Email',
-      value: 'ulisesmendez@codeinvest.com',
-      action: 'mailto:ulisesmendez@codeinvest.com',
+      value: 'ulisesmz.dev@gmail.com',
+      action: 'mailto:ulisesmz.dev@gmail.com',
       copyable: true,
     },
     {
       icon: '📱',
       label: 'WhatsApp',
-      value: '+506 6127 4805',
+      value: '+506 6127-4805',
       action: 'https://wa.me/50661274805',
       copyable: false,
     },
@@ -89,7 +89,7 @@ const Contact = () => {
   const socialLinks = [
     { name: 'GitHub', handle: '@UlisesMZ03', url: 'https://github.com/UlisesMZ03', color: '#6C63FF' },
     { name: 'LinkedIn', handle: '@ulisesmz', url: 'https://linkedin.com/in/ulisesmz', color: '#00F0FF' },
-    { name: 'Instagram', handle: '@ulisesmz', url: 'https://instagram.com/ulisesmz', color: '#FF00AA' },
+    { name: 'Instagram', handle: '@_ulisesmz_', url: 'https://instagram.com/_ulisesmz_', color: '#FF00AA' },
   ];
 
   const copyToClipboard = (text) => {

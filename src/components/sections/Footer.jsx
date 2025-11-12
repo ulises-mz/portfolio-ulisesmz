@@ -19,9 +19,9 @@ const Footer = () => {
   const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/UlisesMZ03', icon: 'GH' },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/ulisesmz', icon: 'IN' },
-    { name: 'Instagram', url: 'https://instagram.com/ulisesmz', icon: 'IG' },
+    { name: 'Instagram', url: 'https://instagram.com/_ulisesmz_', icon: 'IG' },
     { name: 'WhatsApp', url: 'https://wa.me/50661274805', icon: 'WA' },
-    { name: 'Email', url: 'mailto:ulisesmendez@codeinvest.com', icon: '@' },
+    { name: 'Email', url: 'mailto:ulisesmz.dev@gmail.com', icon: '@' },
   ];
 
   const scrollToSection = (sectionId) => {

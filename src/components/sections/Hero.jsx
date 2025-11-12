@@ -365,7 +365,7 @@ const Hero = () => {
         {[
           { icon: 'GitHub', href: 'https://github.com/UlisesMZ03', color: '#6C63FF' },
           { icon: 'LinkedIn', href: 'https://linkedin.com/in/ulisesmz', color: '#00F0FF' },
-          { icon: 'Instagram', href: 'https://instagram.com/ulisesmz', color: '#FF00AA' },
+          { icon: 'Instagram', href: 'https://instagram.com/_ulisesmz_', color: '#FF00AA' },
           { icon: 'WhatsApp', href: 'https://wa.me/50661274805', color: '#00FFA3' },
         ].map((social, i) => (
           <a
