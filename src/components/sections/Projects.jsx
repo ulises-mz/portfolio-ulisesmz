@@ -108,6 +108,27 @@ const Projects = () => {
       githubLink: 'https://github.com/UlisesMZ03',
       image: '/images/sirius.png',
     },
+    {
+      title: 'Eagle Defender',
+      description:
+        'Juego de estrategia y defensa desarrollado en Python con pygame. Incluye sistema de usuarios completo, múltiples pantallas interactivas, efectos visuales y sonoros personalizados, y persistencia de datos con SQLite.',
+      tech: ['Python 3', 'pygame', 'SQLite', 'OOP', 'Arquitectura Modular'],
+      features: [
+        'Sistema de login y registro de usuarios',
+        'Pantallas interactivas: menú, instrucciones, Hall of Fame',
+        'Efectos visuales y sonoros personalizados',
+        'Base de datos SQLite para guardar progreso',
+        'Componentes reutilizables (botones, inputs, perfiles)',
+        'Sistema de música y efectos con selección personalizada',
+      ],
+      metrics: [
+        { label: 'Pantallas', value: '6+' },
+        { label: 'Componentes', value: '10+' },
+      ],
+      demoLink: 'https://github.com/UlisesMZ03/EagleDefender',
+      githubLink: 'https://github.com/UlisesMZ03/EagleDefender',
+      image: '/images/eagledefender.png',
+    },
   ];
 
   const otherProjects = [

@@ -51,6 +51,14 @@ Coloca los mockups de tus proyectos aquí con los siguientes nombres:
 - Aspect ratio: 16:9
 - Tamaño recomendado: 1280x720px
 
+### 6. Eagle Defender
+**Archivo:** `eagledefender.png`
+- Grid de proyectos principales
+- Videojuego de estrategia y defensa en Python
+- Aspect ratio: 16:9
+- Tamaño recomendado: 1280x720px
+- Sugerencia: Screenshot del menú principal o gameplay
+
 ### Especificaciones generales para mockups:
 - **Formato:** PNG preferido (para transparencias) o JPG
 - **Aspect Ratio:** 16:9 (horizontal)
