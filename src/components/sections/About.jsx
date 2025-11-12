@@ -56,18 +56,18 @@ const About = () => {
     <section
       id="sobre-mi"
       ref={sectionRef}
-      className="relative py-24 md:py-32 px-6 md:px-12"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-12"
       style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236C63FF' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
       }}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-5 gap-12 items-center">
+        <div className="grid md:grid-cols-5 gap-8 sm:gap-10 md:gap-12 items-center">
           {/* Left side - Profile Image */}
-          <div className="md:col-span-2 flex justify-center md:justify-start">
+          <div className="md:col-span-2 flex justify-center md:justify-start order-1 md:order-none">
             <div className="relative">
               {/* Hexagon container */}
-              <div className="relative w-80 h-80 md:sticky md:top-32">
+              <div className="relative w-64 sm:w-72 md:w-80 h-64 sm:h-72 md:h-80 md:sticky md:top-32">
                 {/* Rotating border */}
                 <svg
                   viewBox="0 0 100 100"
@@ -160,22 +160,22 @@ const About = () => {
           </div>
 
           {/* Right side - Content */}
-          <div className="md:col-span-3 space-y-8">
+          <div className="md:col-span-3 space-y-6 sm:space-y-8 order-2 md:order-none">
             {/* Section label */}
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <p
-                className="text-sm font-inter font-medium tracking-widest text-neon-violet uppercase"
+                className="text-xs sm:text-sm font-inter font-medium tracking-widest text-neon-violet uppercase text-center md:text-left"
                 style={{ opacity: 0.8 }}
               >
                 Sobre Mí
               </p>
-              <h2 className="text-4xl md:text-5xl font-grotesk font-bold gradient-text leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold gradient-text leading-tight text-center md:text-left">
                 Construyendo el futuro digital desde Costa Rica 🇨🇷
               </h2>
             </div>
 
             {/* Description paragraphs */}
-            <div className="space-y-6 text-lg text-text-secondary leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-text-secondary leading-relaxed text-center md:text-left">
               <p className="animate-fadeInUp">
                 Soy un{' '}
                 <span className="text-neon-cyan font-semibold">
@@ -245,7 +245,7 @@ const About = () => {
             </div>
 
             {/* Stats cards */}
-            <div className="grid grid-cols-3 gap-4 pt-8">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 pt-4 sm:pt-6 md:pt-8">
               {[
                 {
                   number: counts.age,
@@ -268,25 +268,25 @@ const About = () => {
               ].map((stat, index) => (
                 <div
                   key={index}
-                  className="group relative glass-light rounded-xl p-6 border border-text-tertiary hover:border-neon-violet transition-all duration-300 hover:-translate-y-2"
+                  className="group relative glass-light rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-text-tertiary hover:border-neon-violet transition-all duration-300 hover:-translate-y-2"
                   style={{
                     background:
                       'linear-gradient(145deg, rgba(108,99,255,0.05), rgba(0,240,255,0.05))',
                   }}
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-1 sm:space-y-2 text-center">
                     <div
-                      className={`text-4xl font-grotesk font-bold gradient-text-${stat.color}`}
+                      className={`text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold gradient-text-${stat.color}`}
                     >
                       {stat.number}
                     </div>
-                    <div className="text-sm font-inter font-semibold text-text-primary">
+                    <div className="text-xs sm:text-sm font-inter font-semibold text-text-primary">
                       {stat.label}
                     </div>
-                    <div className="text-xs font-inter text-text-tertiary">{stat.subtitle}</div>
+                    <div className="text-[10px] sm:text-xs font-inter text-text-tertiary hidden sm:block">{stat.subtitle}</div>
                   </div>
                   <div
-                    className={`absolute inset-0 rounded-xl bg-${stat.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-300`}
+                    className={`absolute inset-0 rounded-lg sm:rounded-xl bg-${stat.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-300`}
                   ></div>
                 </div>
               ))}

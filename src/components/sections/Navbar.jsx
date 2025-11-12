@@ -49,24 +49,24 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'h-16 glass' : 'h-20 bg-transparent'
+        scrolled ? 'h-14 sm:h-16 glass' : 'h-16 sm:h-20 bg-transparent'
       }`}
       style={{
         borderBottom: scrolled ? '1px solid rgba(108, 99, 255, 0.2)' : 'none',
         boxShadow: scrolled ? '0 8px 32px rgba(108, 99, 255, 0.1)' : 'none',
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <div
           className="flex items-center cursor-pointer group"
           onClick={() => scrollToSection('inicio')}
         >
           <div className="relative">
-            <div className="w-12 h-12 rounded-lg glass border-2 border-neon-violet flex items-center justify-center font-grotesk font-bold text-xl gradient-text group-hover:scale-110 transition-transform duration-300">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-md sm:rounded-lg glass border-2 border-neon-violet flex items-center justify-center font-grotesk font-bold text-lg sm:text-xl gradient-text group-hover:scale-110 transition-transform duration-300">
               UM
             </div>
-            <div className="absolute inset-0 rounded-lg bg-neon-violet opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+            <div className="absolute inset-0 rounded-md sm:rounded-lg bg-neon-violet opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
           </div>
         </div>
 

@@ -70,31 +70,31 @@ const Hero = () => {
 
           {/* Title */}
           <div className="space-y-4">
-            <p className="text-lg md:text-xl font-inter text-text-secondary animate-fadeInUp">
+            <p className="text-base md:text-lg lg:text-xl font-inter text-text-secondary animate-fadeInUp">
               Hola, soy
             </p>
-            <h1 className="text-5xl md:text-7xl font-grotesk font-bold gradient-text animate-fadeInUp stagger-1">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-grotesk font-bold gradient-text animate-fadeInUp stagger-1 leading-tight">
               ULISES MÉNDEZ
             </h1>
-            <div className="h-16 md:h-20 flex items-center">
-              <h2 className="text-2xl md:text-3xl font-poppins font-semibold text-text-primary">
+            <div className="h-14 sm:h-16 md:h-20 flex items-center">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-poppins font-semibold text-text-primary">
                 {displayText}
-                <span className="inline-block w-0.5 h-8 bg-neon-cyan ml-1 animate-pulse"></span>
+                <span className="inline-block w-0.5 h-6 sm:h-7 md:h-8 bg-neon-cyan ml-1 animate-pulse"></span>
               </h2>
             </div>
           </div>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl font-inter text-text-secondary max-w-2xl leading-relaxed animate-fadeInUp stagger-2" style={{ opacity: 0.9 }}>
+          <p className="text-base md:text-lg lg:text-xl font-inter text-text-secondary max-w-2xl leading-relaxed animate-fadeInUp stagger-2" style={{ opacity: 0.9 }}>
             Transformo ideas en experiencias digitales innovadoras con código limpio y diseño
             impactante
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp stagger-3">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp stagger-3">
             <button
               onClick={() => scrollToSection('proyectos')}
-              className="group relative px-8 py-4 rounded-xl font-inter font-medium text-lg overflow-hidden transition-all duration-400 hover:scale-105"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-inter font-medium text-base sm:text-lg overflow-hidden transition-all duration-400 hover:scale-105"
             >
               <div className="absolute inset-0 gradient-bg"></div>
               <span className="relative z-10 flex items-center justify-center space-x-2">
@@ -106,12 +106,56 @@ const Hero = () => {
 
             <button
               onClick={() => scrollToSection('contacto')}
-              className="group relative px-8 py-4 rounded-xl font-inter font-medium text-lg overflow-hidden transition-all duration-400 hover:scale-105"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-inter font-medium text-base sm:text-lg overflow-hidden transition-all duration-400 hover:scale-105"
             >
               <div className="absolute inset-0 border-2 border-neon-cyan rounded-xl"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-neon-violet to-neon-cyan opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-full group-hover:translate-x-0"></div>
               <span className="relative z-10">Contactar</span>
             </button>
+          </div>
+
+          {/* Mobile SVG - simplified version */}
+          <div className="flex md:hidden items-center justify-center mt-8">
+            <div className="relative w-48 h-48 flex items-center justify-center">
+              {/* Simplified SVG for mobile */}
+              <div className="animate-float">
+                <svg viewBox="0 0 200 200" className="w-full h-full" style={{ filter: 'drop-shadow(0 0 20px rgba(108, 99, 255, 0.5))' }}>
+                  <defs>
+                    <linearGradient id="mobileGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#6C63FF">
+                        <animate attributeName="stop-color" values="#6C63FF; #00F0FF; #FF00AA; #6C63FF" dur="4s" repeatCount="indefinite" />
+                      </stop>
+                      <stop offset="100%" stopColor="#00F0FF">
+                        <animate attributeName="stop-color" values="#00F0FF; #FF00AA; #6C63FF; #00F0FF" dur="4s" repeatCount="indefinite" />
+                      </stop>
+                    </linearGradient>
+                  </defs>
+
+                  {/* Hexagon */}
+                  <polygon
+                    points="100,30 160,65 160,125 100,160 40,125 40,65"
+                    fill="rgba(108, 99, 255, 0.1)"
+                    stroke="url(#mobileGradient)"
+                    strokeWidth="3"
+                  >
+                    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+                  </polygon>
+
+                  {/* Code symbol */}
+                  <g transform="translate(100, 95)">
+                    <path d="M -15,-15 L -25,0 L -15,15" fill="none" stroke="url(#mobileGradient)" strokeWidth="4" strokeLinecap="round">
+                      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+                    </path>
+                    <path d="M 15,-15 L 25,0 L 15,15" fill="none" stroke="url(#mobileGradient)" strokeWidth="4" strokeLinecap="round">
+                      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" begin="0.5s" />
+                    </path>
+                    <line x1="-5" y1="18" x2="5" y2="-18" stroke="url(#mobileGradient)" strokeWidth="4" strokeLinecap="round">
+                      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" begin="1s" />
+                    </line>
+                  </g>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -390,10 +434,10 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 animate-bounce">
-        <span className="text-sm font-inter text-text-tertiary">Scroll para explorar</span>
-        <div className="w-6 h-10 border-2 border-neon-violet rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-neon-violet rounded-full animate-pulse"></div>
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 animate-bounce">
+        <span className="text-xs sm:text-sm font-inter text-text-tertiary hidden sm:block">Scroll para explorar</span>
+        <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-neon-violet rounded-full flex items-start justify-center p-1.5 sm:p-2">
+          <div className="w-1 h-2 sm:h-3 bg-neon-violet rounded-full animate-pulse"></div>
         </div>
       </div>
 

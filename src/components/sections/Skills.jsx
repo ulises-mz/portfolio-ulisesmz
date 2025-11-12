@@ -64,29 +64,29 @@ const Skills = () => {
   return (
     <section
       id="habilidades"
-      className="relative py-24 md:py-32 px-6 md:px-12"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-12"
       style={{
         background: 'radial-gradient(ellipse at center, rgba(108,99,255,0.1) 0%, transparent 70%)',
       }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center space-y-4 mb-16">
-          <p className="text-sm font-inter font-medium tracking-widest text-neon-violet uppercase opacity-80">
+        <div className="text-center space-y-3 sm:space-y-4 mb-10 sm:mb-12 md:mb-16">
+          <p className="text-xs sm:text-sm font-inter font-medium tracking-widest text-neon-violet uppercase opacity-80">
             Mis Habilidades
           </p>
-          <h2 className="text-4xl md:text-5xl font-grotesk font-bold gradient-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold gradient-text px-4">
             Tecnologías y herramientas que domino
           </h2>
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10 md:mb-12 px-2">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative px-6 py-3 rounded-full font-inter font-medium transition-all duration-300 ${
+              className={`relative px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-inter font-medium text-xs sm:text-sm md:text-base transition-all duration-300 ${
                 activeTab === tab.id
                   ? 'text-text-primary scale-105'
                   : 'text-text-secondary hover:text-text-primary hover:scale-105'
@@ -114,7 +114,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
           {skillsData[activeTab].map((skill, index) => (
             <div
               key={skill.name}
@@ -122,12 +122,12 @@ const Skills = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Card */}
-              <div className="relative h-40 glass-light rounded-xl border border-text-tertiary hover:border-neon-violet transition-all duration-300 overflow-hidden">
+              <div className="relative h-32 sm:h-36 md:h-40 glass-light rounded-lg sm:rounded-xl border border-text-tertiary hover:border-neon-violet transition-all duration-300 overflow-hidden">
                 {/* Front face */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-4 transition-all duration-500 group-hover:rotateY-180">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-2 sm:p-3 md:p-4 transition-all duration-500 group-hover:rotateY-180">
                   {/* Icon placeholder */}
                   <div
-                    className="w-16 h-16 rounded-lg flex items-center justify-center mb-3 font-mono font-bold text-2xl transition-transform duration-300 group-hover:scale-110"
+                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-md sm:rounded-lg flex items-center justify-center mb-2 sm:mb-3 font-mono font-bold text-lg sm:text-xl md:text-2xl transition-transform duration-300 group-hover:scale-110"
                     style={{
                       background: `linear-gradient(135deg, ${skill.color}33, ${skill.color}11)`,
                       color: skill.color,
@@ -137,20 +137,20 @@ const Skills = () => {
                   </div>
 
                   {/* Name */}
-                  <p className="font-inter font-semibold text-center text-text-primary">
+                  <p className="font-inter font-semibold text-center text-text-primary text-xs sm:text-sm px-1">
                     {skill.name}
                   </p>
                 </div>
 
                 {/* Back face - Level indicator */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-dark-secondary to-dark-tertiary">
-                  <div className="text-3xl font-grotesk font-bold gradient-text mb-2">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-2 sm:p-3 md:p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-dark-secondary to-dark-tertiary">
+                  <div className="text-2xl sm:text-3xl font-grotesk font-bold gradient-text mb-1 sm:mb-2">
                     {skill.level}%
                   </div>
-                  <p className="text-xs text-text-secondary mb-4">Nivel de dominio</p>
+                  <p className="text-[10px] sm:text-xs text-text-secondary mb-2 sm:mb-3 md:mb-4">Nivel de dominio</p>
 
                   {/* Progress bar */}
-                  <div className="w-full h-2 bg-dark-primary rounded-full overflow-hidden">
+                  <div className="w-full h-1.5 sm:h-2 bg-dark-primary rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full transition-all duration-1000 ease-out"
                       style={{
