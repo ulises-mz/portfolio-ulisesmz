@@ -69,6 +69,8 @@ const Projects = () => {
       demoLink: 'https://laserzonearena.com',
       githubLink: 'https://github.com/UlisesMZ03',
       image: '/images/laserzonearena.png',
+      gridSize: 'col-span-1 md:col-span-2', // Horizontal wide
+      aspectRatio: 'aspect-video', // 16:9
     },
     {
       title: 'Simacr PWA',
@@ -90,6 +92,8 @@ const Projects = () => {
       demoLink: 'https://simacr.com',
       githubLink: '#',
       image: '/images/sima.png',
+      gridSize: 'col-span-1 md:row-span-2', // Vertical tall
+      aspectRatio: 'aspect-[3/4]', // Vertical
     },
     {
       title: 'CodeINVEST Website',
@@ -111,6 +115,8 @@ const Projects = () => {
       demoLink: 'https://codeinvest.cr',
       githubLink: 'https://github.com/UlisesMZ03',
       image: '/images/codeinvest.png',
+      gridSize: 'col-span-1', // Normal
+      aspectRatio: 'aspect-video', // 16:9
     },
     {
       title: 'Sirius Dev Website',
@@ -132,6 +138,8 @@ const Projects = () => {
       demoLink: '#',
       githubLink: 'https://github.com/UlisesMZ03',
       image: '/images/sirius.png',
+      gridSize: 'col-span-1', // Normal
+      aspectRatio: 'aspect-video', // 16:9
     },
   ];
 
@@ -305,16 +313,16 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Main Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16">
+        {/* Main Projects Grid - Bento Box Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16 auto-rows-auto">
           {mainProjects.map((project, idx) => (
             <div
               key={project.title}
-              className="group relative glass rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-text-tertiary hover:border-neon-cyan transition-all duration-500 hover:-translate-y-2 animate-fadeInUp"
+              className={`group relative glass rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 border border-text-tertiary hover:border-neon-cyan transition-all duration-500 hover:-translate-y-2 animate-fadeInUp ${project.gridSize}`}
               style={{ animationDelay: `${idx * 0.2}s` }}
             >
               {/* Mockup */}
-              <div className="aspect-video rounded-md sm:rounded-lg glass-light border border-neon-cyan mb-4 sm:mb-6 overflow-hidden relative bg-gray-900 flex items-center justify-center">
+              <div className={`${project.aspectRatio} rounded-md sm:rounded-lg glass-light border border-neon-cyan mb-4 sm:mb-6 overflow-hidden relative bg-gray-900 flex items-center justify-center`}>
                 <img
                   src={project.image}
                   alt={project.title}
