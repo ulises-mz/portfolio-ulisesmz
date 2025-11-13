@@ -92,8 +92,8 @@ const Projects = () => {
       demoLink: 'https://simacr.com',
       githubLink: '#',
       image: '/images/sima.png',
-      gridSize: 'col-span-1 md:row-span-2', // Vertical tall
-      aspectRatio: 'aspect-[3/4]', // Vertical
+      gridSize: 'col-span-1', // Normal card
+      aspectRatio: 'aspect-[4/5]', // Slightly vertical
     },
     {
       title: 'CodeINVEST Website',
@@ -260,12 +260,12 @@ const Projects = () => {
 
                 {/* Right - Mockup */}
                 <div className="relative">
-                  <div className="aspect-video rounded-xl glass-light border border-neon-violet overflow-hidden group-hover:scale-105 transition-transform duration-500 bg-gray-900 flex items-center justify-center">
+                  <div className="aspect-video rounded-xl glass-light border border-neon-violet overflow-hidden group-hover:scale-105 transition-transform duration-500">
                     {/* Project Image */}
                     <img
                       src={featuredProject.image}
                       alt={featuredProject.title}
-                      className="w-full h-full object-contain p-4"
+                      className="w-full h-full object-cover"
                       onError={(e) => {
                         // Fallback to gradient if image fails to load
                         e.target.style.display = 'none';
@@ -322,11 +322,11 @@ const Projects = () => {
               style={{ animationDelay: `${idx * 0.2}s` }}
             >
               {/* Mockup */}
-              <div className={`${project.aspectRatio} rounded-md sm:rounded-lg glass-light border border-neon-cyan mb-4 sm:mb-6 overflow-hidden relative bg-gray-900 flex items-center justify-center`}>
+              <div className={`${project.aspectRatio} rounded-md sm:rounded-lg glass-light border border-neon-cyan mb-4 sm:mb-6 overflow-hidden relative`}>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   onError={(e) => {
                     // Fallback to gradient if image fails to load
                     e.target.style.display = 'none';
