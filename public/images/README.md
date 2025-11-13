@@ -28,7 +28,7 @@ Coloca los mockups de tus proyectos aquí con los siguientes nombres:
 - Con efecto de escaneo animado
 
 ### 2. Laser Zone Arena
-**Archivo:** `laserzonearena.png`
+**Archivo:** `lazerzone.png`
 - Grid de proyectos principales
 - Aspect ratio: 16:9
 - Tamaño recomendado: 1280x720px

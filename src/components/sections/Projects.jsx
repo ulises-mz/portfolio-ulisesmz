@@ -68,7 +68,7 @@ const Projects = () => {
       ],
       demoLink: 'https://laserzonearena.com',
       githubLink: 'https://github.com/UlisesMZ03',
-      image: '/images/laserzonearena.png',
+      image: '/images/lazerzone.png',
       gridSize: 'col-span-1 md:col-span-2', // Horizontal wide
       aspectRatio: 'aspect-video', // 16:9
     },
