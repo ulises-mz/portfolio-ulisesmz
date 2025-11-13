@@ -11,7 +11,7 @@ import Footer from './components/sections/Footer';
 
 function App() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden w-full">
       {/* Background effects */}
       <Background />
 
@@ -19,9 +19,9 @@ function App() {
       <CustomCursor />
 
       {/* Main content */}
-      <div className="relative z-10">
+      <div className="relative z-10 w-full overflow-x-hidden">
         <Navbar />
-        <main>
+        <main className="w-full overflow-x-hidden">
           <Hero />
           <About />
           <Skills />
