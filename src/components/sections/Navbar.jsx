@@ -95,12 +95,16 @@ const Navbar = () => {
 
         {/* Download CV Button */}
         <div className="hidden md:block">
-          <button className="relative px-6 py-2.5 rounded-lg font-inter font-medium overflow-hidden group">
+          <a
+            href="/CV-Ulises-Mendez.pdf"
+            download="CV-Ulises-Mendez.pdf"
+            className="relative px-6 py-2.5 rounded-lg font-inter font-medium overflow-hidden group inline-block"
+          >
             <div className="absolute inset-0 bg-gradient-to-r from-neon-violet via-neon-cyan to-neon-magenta opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="absolute inset-0.5 bg-dark-primary rounded-lg"></div>
             <span className="relative z-10 gradient-text">Descargar CV</span>
             <div className="absolute inset-0 bg-gradient-to-r from-neon-violet to-neon-cyan opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -146,9 +150,14 @@ const Navbar = () => {
               {link.label}
             </button>
           ))}
-          <button className="px-8 py-3 rounded-lg gradient-bg font-inter font-medium text-lg">
+          <a
+            href="/CV-Ulises-Mendez.pdf"
+            download="CV-Ulises-Mendez.pdf"
+            className="px-8 py-3 rounded-lg gradient-bg font-inter font-medium text-lg inline-block"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             Descargar CV
-          </button>
+          </a>
         </div>
       </div>
     </nav>
